@@ -25,7 +25,7 @@ def move_colors(general_colors, positions):
 
 
 def list_colors(general_colors, ball_colors):
-    general_colors_static = ["yellow", "green", "royalblue", "violet", "red", "orange"]
+    general_colors_static = ["red", "orange", "yellow", "green", "royalblue", "violet"]
     dictionary = {}
     for t in range(0, len(general_colors_static)):
         dictionary[general_colors_static[t]] = general_colors[t]

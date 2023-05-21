@@ -22,7 +22,6 @@ def task1(ax):
     folder_path = "./src/images/"
     task_name = "task1.png"
     save_image(folder_path, task_name, plt)
-    return ax
 
 
 def task2(ax, data_frame):
@@ -35,42 +34,30 @@ def task2(ax, data_frame):
     folder_path = "./src/images/"
     task_name = "task2.png"
     save_image(folder_path, task_name, plt)
-    return ax
 
 
 def task3(ax, data_frame):
     ax.set_facecolor("black")
     x_values, y_values, ball_colors = get_columns_array(data_frame)
-    general_colors = ["yellow", "green", "royalblue", "violet", "red", "orange"]
-    print(general_colors)
-    move_colors(general_colors, 1)
-    print(general_colors)
-    # light = Light((x_values[0], y_values[0]), ball_colors[0])
-    # light.plotLight(ax)
-    # light = Light((x_values[1], y_values[1]), ball_colors[1])
-    # light.plotLight(ax)
-    # light = Light((x_values[2], y_values[2]), ball_colors[2])
-    # for t in range(0, 10):
-    # light = Light((x_values[t], y_values[t]), ball_colors[t])
-    # light.plotLight(ax)
-    # light.plotLight(ax)
-    # print(ball_colors)
-
-    # for t in range(0,5):
-    # for i in range(0,len(x_values)):
-
-    # for i in range(0, len(x_values)):
-
-    # light = Light((x_value"s[i], y_values[i]), ball_colors[i])
-    # light.plotLight(ax)
-
-    # subIndex = 1
-    # plt.title(f"Moving Coloured lights i:{subIndex}", fontsize="18")
-    # index = 1
-    # savePath = f"./images/task3/task3_{index}.png"
-    # plt.savefig(savePath)
-    print("task3")
-    pass
+    general_colors = ["red", "orange", "yellow", "green", "royalblue", "violet"]
+    for t in range(0, len(x_values)):
+        light = Light((x_values[t], y_values[t]), ball_colors[t])
+        light.plotLight(ax)
+    plt.title("Moving Coloured Lights i : 0", fontsize="18")
+    folder_path = "./src/images/task3/"
+    task_name = "task3_0.png"
+    save_image(folder_path, task_name, plt)
+    for i in range(0, 5):
+        move_colors(general_colors, 1)
+        list_colors(general_colors, ball_colors)
+        print(ball_colors)
+        for t in range(0, len(x_values)):
+            light = Light((x_values[t], y_values[t]), ball_colors[t])
+            light.plotLight(ax)
+        plt.title(f"Moving Coloured Lights i : {i+1}", fontsize="18")
+        folder_path = "./src/images/task3/"
+        task_name = f"task3_{i+1}.png"
+        save_image(folder_path, task_name, plt)
 
 
 def task4(ax, data_frame):
@@ -93,4 +80,4 @@ def task4(ax, data_frame):
             task_name = f"task4_{t}.png"
             save_image(folder_path, task_name, plt)
 
-    plt.show()
+    # plt.show()
