@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import numpy as np
+import random
 
 
 class Light:
@@ -32,9 +32,13 @@ class BubbleMachine:
     def stepChange(self):
         if self.flow == 1:
             self.bubbles.append([self.pos[0], self.pos[1]])
+        step_x = random.randint(100, 1000)
+        step_y = random.randint(100, 1000)
         for s in self.bubbles:
-            s[0] = s[0] + 100
-            s[1] = s[1] + 100
+            s[0] += step_x
+            s[1] += step_y
+            # s[0] = s[0] + 100
+            # s[1] = s[1] + 100
 
     def plotBubbles(self, ax):
         xvalues = [s[0] for s in self.bubbles]
@@ -42,4 +46,5 @@ class BubbleMachine:
         print(xvalues)
         print(yvalues)
 
-        ax.scatter(xvalues, yvalues, s=[500], c="white")
+        # ax.scatter(xvalues, yvalues, s=[500], c="white")
+        ax.scatter(xvalues, yvalues, s=[500], c="white", alpha=0.5)
