@@ -13,21 +13,21 @@ def main():
     ax.set_ylim(0, LIMITS[1])
     ax.set_aspect("equal")
 
-    # making first task
+    # ------------------------------------- making first task-------------------------------------------
     # ax = task1(ax)
-    # making second task
+    # -------------------------------------making second task------------------------------------------
     # csv_file = "./src/csvFiles/lights.csv"
     # data_frame = pd.read_csv(csv_file, header=None)
     # ax = task2(ax, data_frame)
-    # making third task
+    # -------------------------------------making third task--------------------------------------------
     # csv_file = "./src/csvFiles/col_lights.csv"
     # data_frame = pd.read_csv(csv_file, header=None)
     # ax = task3(ax, data_frame)
-    # light.plotLight(ax)
-    # making fourth task
+    # ------------------------------------- making fourth task-------------------------------------------
     # csv_file = "./src/csvFiles/col_lights.csv"
     # data_frame = pd.read_csv(csv_file, header=None)
     # ax = task4(ax, data_frame)
+    # -------------------------------------------finish---------------------------------------------------
     # bubbles.stepChange()
     # bubbles.plotBubbles(ax)
 
