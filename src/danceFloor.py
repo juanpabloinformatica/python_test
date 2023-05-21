@@ -20,11 +20,11 @@ def main():
     # data_frame = pd.read_csv(csv_file, header=None)
     # ax = task2(ax, data_frame)
     # making third task
-    csv_file = "./src/csvFiles/col_lights.csv"
-    data_frame = pd.read_csv(csv_file, header=None)
-    ax = task3(ax, data_frame)
+    # csv_file = "./src/csvFiles/col_lights.csv"
+    # data_frame = pd.read_csv(csv_file, header=None)
+    # ax = task3(ax, data_frame)
     # light.plotLight(ax)
-
+    # making fourth task
     # csv_file = "./src/csvFiles/col_lights.csv"
     # data_frame = pd.read_csv(csv_file, header=None)
     # ax = task4(ax, data_frame)
